@@ -2,6 +2,7 @@ body {
   font-family: Raleway, san-serif;
   font-size: 18px;
   line-height: 1.35;
+  margin: 0 auto;
 }
 
 .header {
@@ -9,7 +10,6 @@ body {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   width: 100%;
-  height: 293px;
   padding: 92px 49px 93px 49px;
 }
 
@@ -20,8 +20,11 @@ body {
   list-style: circle;
 }
 
-.header__link_active {
+.header__links-list-item_no-bullet {
   list-style: none;
+}
+
+.header__link_active {
   text-decoration: none;
 }
 
@@ -31,26 +34,28 @@ body {
 }
 
 .address {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  width: 240px;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  padding-top: 4px;
+  text-underline-offset: 4px;
 }
 
-.header__links-list-item_no-bullet {
+.header__address {
+ justify-self: end;
+}
+
+.address__list-item_no-bullet {
   list-style: none;
-}
-
-
 }
 
 /*---Ниже секция с картиной и основным заголовком---*/
 
 .cover {
   width: 100%;
-  height: 757px;
   background-image: url(../images/cover.jpg);
   position: relative;
-  z-index: 0;
 }
 
 .overlay {
@@ -63,9 +68,11 @@ body {
   left: 0;
   top: 0;
 }
-
 .cover__title {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   z-index: 2;
   font-size: 100px;
   font-weight: 700;
@@ -75,41 +82,42 @@ body {
   letter-spacing: 30px;
 }
 
+.no-letter-spacing {
+  letter-spacing: 0;
+}
+
 .aligned-text {
-  padding: 165px 50px 0 50px;
+  margin: 165px 50px 0;
 }
 
 .aligned-text_center {
-  display: block;
   text-align: center;
-  margin: 0 80px 0px 50px;
-  padding-top: 12px;
 }
 
 .aligned-text_right {
   text-align: right;
-  padding: 5px 20px;
+  margin: 0 50px;
 }
 
-.accent-right {
-  padding-left: 30px;
-}
-
-.accent-left {
-  padding-right: 30px;
+.letter-spacing-extended {
+  letter-spacing: 60px;
 }
 
 .cover__discription {
   position: relative;
+  display: flex;
+  gap: 78px;
+  align-items: center;
+  justify-content: end;
   z-index: 2;
-  display: inline-block;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255);
   font-size: 22px;
   font-weight: 400;
   line-height: 28px;
-  word-spacing: 17px;
+  word-spacing: 18px;
   text-transform: uppercase;
-  padding: 135px 77px 62px 424px;
+  margin: 128px 50px 0;
+  padding-bottom: 62px;
 }
 
 .bet-button {
@@ -117,18 +125,19 @@ body {
   z-index: 2;
   display: inline;
   padding: 12px 32px;
-  border: 2px solid white;
+  border: 1px solid white;
   font-size: 22px;
   font-weight: 400;
   text-transform: uppercase;
+  text-underline-offset: 4px;
   background-color: transparent;
   color: rgba(255, 255, 255);
 }
 
 /*---Ниже идет раздел с карточками "ЛОТЫ"--- */
-.lots {
 
-  margin: 180px 50px 0 50px;
+.lots {
+  margin: 168px 50px 0 50px;
   width: 100%;
 }
 
@@ -143,7 +152,6 @@ body {
 .lots__card-list {
   display: flex;
   flex-wrap: wrap;
-  min-height: 450px;
   list-style: none;
   gap: 25px;
   padding: 26px 0 28px 0;
@@ -157,36 +165,27 @@ body {
 .card {
   display: flex;
   flex-direction: column;
+  position: relative;
+  min-height: 450px;
   padding: 51px 40px;
   width: 430px;
   height: 100%;
   color: white;
   position: relative;
+  background-size: cover;
 }
+
 
 .card_type-film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: 430px 450px;
 }
 
 .card_type-book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: 430px 450px;
 }
 
 .card_type-picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: 430px 450px;
-}
-
-.overlay_card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: black;
-  opacity: 0.6;
-  left: 0;
-  top: 0;
 }
 
 .card__title {
@@ -197,7 +196,7 @@ body {
   text-decoration: underline;
   flex-grow: 1;
   margin-bottom: 30px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .card__text {
@@ -205,7 +204,7 @@ body {
   font-weight: 400;
   line-height: 24px;
   text-transform: none;
-  z-index: 1;
+  z-index: 2;
 }
 
 .lots__look-more-link {
@@ -269,15 +268,6 @@ body {
   justify-content: space-between;
 }
 
-.footer__address {
-  padding-top: 4px;
-  text-underline-offset: 4px;
-}
-
-.footer__links-list-item_no-bullet {
-  list-style: none;
-}
-
 .footer__menu-list {
   display: flex;
   flex-direction: column;
@@ -285,10 +275,6 @@ body {
   list-style: none;
   line-height: 22px;
   text-underline-offset: 4px;
-
-  
-  
-  
 }
 
 .footer__menu-link_active {
