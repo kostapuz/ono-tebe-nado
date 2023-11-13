@@ -10,7 +10,8 @@ body {
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   width: 100%;
-  padding: 92px 49px 93px 49px;
+  height: auto;
+  padding: 92px 49px 100px 49px;
 }
 
 .header__links-list {
@@ -172,7 +173,6 @@ body {
   width: 430px;
   height: 100%;
   color: white;
-  position: relative;
   background-size: cover;
 }
 
