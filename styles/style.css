@@ -47,7 +47,7 @@
 /*---Ниже секция с картиной и основным заголовком---*/
 
 .cover {
-  width: auto;
+  width: 100%;
   min-height: 757px;
   background: url(../images/cover.jpg) center/cover;
   position: relative;
@@ -133,7 +133,6 @@
 .lots {
   margin: 168px 50px 0 50px;
   padding: 20px 0 0;
-  width: 100%;
 }
 
 .lots__heading {
@@ -163,7 +162,7 @@
   position: relative;
   min-height: 450px;
   padding: 51px 40px;
-  width: 430px;
+  max-width: 430px;
   color: white;
 }
 
@@ -253,7 +252,7 @@
 /*---Ниже раздел "Footer"--- */
 
 .footer {
-  width: 100%;
+  max-width: 1440px;
   height: min-content;
   padding: 180px 50px 90px 50px;
   display: flex;
